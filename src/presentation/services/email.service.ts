@@ -42,7 +42,7 @@ export class EmailService {
         });
 
         await this.mailSentSuccessfully();
-      }, daysToMilliseconds( 2 ) );
+      }, daysToMilliseconds( 0.00138888889 ) );
       
       
       return true;

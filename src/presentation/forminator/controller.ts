@@ -33,8 +33,9 @@ export class PruebaForminatorController {
     
     if( typeof message ===  'object' ) {
       try {
+        console.log("Esperando el tiempo para enviar el correo...");
         return this.emailService.sendEmail( message )
-          .then( () => res.status(200).json({ msg: "success" }) )
+          .then( () => res.status(200).json({ ok: true, msg: "Correo enviado al cliente correctamente" }) )
           .catch( error => res.status(500).json({ error: 'INTERNAL SERVER ERROR' + error }) );
       } catch (error) {
         console.log( error );
