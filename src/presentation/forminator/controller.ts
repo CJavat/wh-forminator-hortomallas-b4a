@@ -37,7 +37,7 @@ export class PruebaForminatorController {
         return this.emailService.sendEmail( message )
           .then( () => res.status(200).json({ ok: true, msg: "Correo enviado al cliente correctamente" }) )
           .catch( error => res.status(500).json({ error: 'INTERNAL SERVER ERROR' + error }) );
-      } catch (error) {
+      } catch ( error ) {
         console.log( error );
         return res.status( 400 ).json({ ok: false, msg: 'Bad Request' });
       }
