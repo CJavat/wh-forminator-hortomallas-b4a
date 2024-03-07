@@ -23,7 +23,7 @@ export class EmailService {
     const { to, subject, htmlBody } = options;
 
     try {
-      //TODO:  setTimeout( async () => { //? Para enviar el correo 2 días después.
+      setTimeout( async () => { //? Para enviar el correo 2 días después.
         
         const sentEmail = await this.transporter.sendMail({
           from: {
@@ -42,7 +42,8 @@ export class EmailService {
         });
 
         await this.mailSentSuccessfully();
-      // }, daysToMilliseconds( 0.00138888889 ) );
+      }, daysToMilliseconds( 0.00138888889 ) );
+      //TODO: Activar el envio de correo cada 2 días y tambien agregarle la nueva ruta a todos los formularios.
       
       
       return true;
