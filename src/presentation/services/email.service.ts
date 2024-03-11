@@ -42,8 +42,7 @@ export class EmailService {
         });
 
         await this.mailSentSuccessfully();
-      }, daysToMilliseconds( 0.00138888889 ) );
-      //TODO: Activar el envio de correo cada 2 días y tambien agregarle la nueva ruta a todos los formularios.
+      }, daysToMilliseconds( 2 ) );
       
       
       return true;
